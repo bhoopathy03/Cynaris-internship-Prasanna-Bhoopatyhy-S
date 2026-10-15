@@ -1,0 +1,6 @@
+emp_id,emp_name,department,city,salary,age,joining_date,manager_id
+1,"Arun Kumar",IT,Bangalore,45000.00,25,2023-01-15,101
+4,"Sneha Reddy",IT,Hyderabad,60000.00,29,2021-03-12,101
+10,"Divya Nair",IT,Bangalore,48000.00,27,2022-12-01,101
+16,"Neha Kapoor",IT,Mumbai,52000.00,26,2023-04-03,NULL
+20,"Nithya Bose",IT,Chennai,39000.00,24,2024-03-19,NULL
