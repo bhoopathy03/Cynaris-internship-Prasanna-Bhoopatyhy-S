@@ -99,3 +99,16 @@ SELECT
     s.department
 FROM staff AS s
 WHERE s.salary > 40000;
+
+##inner join output in table
+employee_name	manager_name
+Arun	Eshan
+Bala	Eshan
+Charan	Farah
+Deepa	Farah
+Eshan	NULL
+Farah	NULL
+Gokul	Eshan
+Hari	Farah
+Isha	Eshan
+Jeevan	Farah
