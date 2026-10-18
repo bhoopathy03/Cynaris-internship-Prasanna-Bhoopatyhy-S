@@ -1,4 +1,4 @@
-CREATE TABLE employees (
+-CREATE TABLE employees (
     emp_id INT PRIMARY KEY,
     emp_name VARCHAR(50),
     department_id INT,
