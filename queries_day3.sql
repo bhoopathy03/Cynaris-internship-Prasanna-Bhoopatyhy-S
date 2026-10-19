@@ -80,3 +80,15 @@ SELECT
     sales_amount,
     SUM(sales_amount) OVER(partition by region) AS total_sales
 FROM sales;
+
+sale_id,region,category,sales_amount,total_sales
+1,East,Furniture,15000.00,80000.00
+2,East,Technology,25000.00,80000.00
+4,East,Furniture,18000.00,80000.00
+9,East,Technology,22000.00,80000.00
+6,North,Clothing,10000.00,45000.00
+7,North,Furniture,20000.00,45000.00
+10,North,Clothing,15000.00,45000.00
+3,West,Furniture,12000.00,50000.00
+5,West,Technology,30000.00,50000.00
+8,West,Furniture,8000.00,50000.00
