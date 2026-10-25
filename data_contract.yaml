@@ -1,0 +1,66 @@
+dataset:
+  name: student_sleep_screen_time_academic_performance
+  version: "1.0"
+
+producer:
+  name: "Prasanna - Data Quality Project"
+
+consumer:
+  name: "BI Dashboard"
+
+format: CSV
+expected_rows: 500
+
+schema:
+  student_id:
+    type: string
+    required: true
+    unique: true
+
+  age:
+    type: integer
+    required: true
+    min: 16
+    max: 100
+
+  gender:
+    type: string
+    required: true
+    allowed_values:
+      - Male
+      - Female
+      - Non-binary
+      - Prefer not to say
+
+  avg_sleep_hours_weekday:
+    type: float
+    required: true
+    min: 0
+    max: 24
+
+  daily_screen_time_hours:
+    type: float
+    required: true
+    min: 0
+    max: 24
+
+  class_attendance_percent:
+    type: float
+    required: true
+    min: 0
+    max: 100
+
+  cgpa:
+    type: float
+    required: true
+    min: 0
+    max: 4
+
+quality_rules:
+  duplicate_rows_allowed: false
+  missing_required_values_allowed: false
+  invalid_values_allowed: false
+
+delivery:
+  frequency: "Before each dashboard refresh"
+  failure_action: "Reject batch and report validation errors"
