@@ -1,4 +1,4 @@
-## Filtering sales in power bi
+## 1.Filtering sales in power bi
 
 Furniture Sales =
 CALCULATE(
@@ -6,7 +6,7 @@ SUM(Sales[SalesAmount]),
 Sales[Category] = "Furniture"
 )
 
-## Running total (this creates to add on the total)--Earlier
+## 2. Running total (this creates to add on the total)--Earlier
 
 Running Total =
 CALCULATE(
@@ -17,7 +17,7 @@ Sales[OrderDate] <= EARLIER(Sales[OrderDate])
 )
 )
 
-## To calculate the sales profit
+## 3. To calculate the sales profit
 
 Running Total =
 CALCULATE(
@@ -28,7 +28,7 @@ Sales[OrderDate] <= EARLIER(Sales[OrderDate])
 )
 )
 
-## IF condition
+## 4. IF condition
 
 Sales Status =
 IF(
@@ -37,7 +37,7 @@ Sales[SalesAmount] > 1000,
 "Low"
 )
 
-## Classfying High, Medium, Low sales
+## 5. Classfying High, Medium, Low sales
 
 Sales Category =
 SWITCH(
